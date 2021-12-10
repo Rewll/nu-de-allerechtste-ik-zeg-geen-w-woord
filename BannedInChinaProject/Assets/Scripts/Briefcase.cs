@@ -4,30 +4,39 @@ using UnityEngine;
 
 public class Briefcase : MonoBehaviour
 {
-    private PersonGenration PersonScript;
-    private GameManager GameManager;
-    [SerializeField] private GameObject gameManager;
-    [SerializeField] private GameObject people;
-    [SerializeField] private int AmountOfItems; 
-
-    private void Awake()
+    [SerializeField] private PersonGenration PersonScript;
+    [SerializeField] private GameManager GameManager;
+    [SerializeField] private int AmountOfItems;
+    [SerializeField] private float Speed;
+    private bool stop;
+    private void Start()
     {
-        PersonScript = people.GetComponent<PersonGenration>();
-        GameManager = gameManager.GetComponent<GameManager>();
+        transform.position = new Vector3(-12, 0, 0);
+        GenerateNewBriefcase();
     }
+
+    private void Update()
+    {
+        transform.position = new Vector3(transform.position.x + Speed, transform.position.y, transform.position.z);
+    }
+
     public void GenerateNewBriefcase()
     {
+        Debug.Log(PersonScript.personStateOfLegal.ToString());
         if (PersonScript.personStateOfLegal.ToString() == "illegalSuitCase")
         {
-            Instantiate(GameManager.AlleIllegalIitems[Random.Range(0, GameManager.AlleIllegalIitems.Count)]);
+            Instantiate(GameManager.AlleIllegalIitems[Random.Range(0, GameManager.AlleIllegalIitems.Count)], transform);
             for (int i = 0; i < AmountOfItems -1; i++)
             {
-                Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)]);
+                Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
             }
         }
         else
         {
-
+            for (int i = 0; i < AmountOfItems; i++)
+            {
+                Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
+            }
         }
 
 
