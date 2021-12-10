@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public List<string> alleBeroepen = new List<string>();
     public List<GameObject> AlleIllegalIitems = new List<GameObject>();
     public List<GameObject> AlleLegalItems = new List<GameObject>();
+    public List<GameObject> AllFaces = new List<GameObject>();
 
 
     void Start()

@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class PersonGenration : MonoBehaviour
 {
+    public GameManager gm;
     public string PersonName;
     public string Job;
     public enum legalState { legal, illegalName, illegalSuitCase, illegalJob}
     public legalState personStateOfLegal;
-    public float illegalChance;
+    public int illegalChance;
 
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        generatePerson();
     }
 
     public void generatePerson()
     {
-        if (Random.Range(1, illegalChance) == 1)
+
+        PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
+        Job = gm.alleBeroepen[Random.Range(0, gm.alleBeroepen.Count)];
+
+        if (Random.Range(0, illegalChance) == 1)
         {
             int illegalThing;
             switch (illegalThing = Random.Range(1, 3))
