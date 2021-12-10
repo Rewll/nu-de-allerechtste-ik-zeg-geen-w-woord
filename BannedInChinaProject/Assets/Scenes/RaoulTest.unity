@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mensenAantal: 10
-  namen: []
+  namenLijst: []
   alleVoorNamen:
   - Youri
   - Johanna
@@ -341,6 +341,7 @@ MonoBehaviour:
   - Van den Berg
   - De Rooij
   - Stroopwafel
+  alleBeroepen: []
   legalItems: []
   illegalItems: []
 --- !u!4 &685528577
