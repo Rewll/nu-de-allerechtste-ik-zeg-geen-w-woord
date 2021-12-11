@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class textScript : MonoBehaviour
 {
     public GameManager gameManager;
     public int textIndex;
-    TMP_Text text;
+    Text naamTekst;
 
     private void Start()
     {
-        text = GetComponent<TMP_Text>();
-        text.text = gameManager.gekozenNamenLijst[textIndex];
+        naamTekst = GetComponent<Text>();
+        naamTekst.text = gameManager.gekozenNamenLijst[textIndex];
     }
 }
