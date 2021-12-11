@@ -20,7 +20,7 @@ public class ButtonScript : MonoBehaviour
             gm.socialCreditScoreTest -= 10;
         }
         newPerson.Invoke();
-        Debug.Log(gm.socialCreditScoreTest);
+        //Debug.Log(gm.socialCreditScoreTest);
     }
 
     public void illegal()
@@ -34,6 +34,6 @@ public class ButtonScript : MonoBehaviour
             gm.socialCreditScoreTest -= 10;
         }
         newPerson.Invoke();
-        Debug.Log(gm.socialCreditScoreTest);
+        //Debug.Log(gm.socialCreditScoreTest);
     }
 }
