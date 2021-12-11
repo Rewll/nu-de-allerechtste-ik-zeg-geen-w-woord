@@ -223,6 +223,9 @@ MonoBehaviour:
   Job: 
   illegalChance: 2
   personStateOfLegal: 0
+  geefNaamDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &199883249
 Transform:
   m_ObjectHideFlags: 0
@@ -250,7 +253,7 @@ GameObject:
   - component: {fileID: 259800161}
   - component: {fileID: 259800160}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EndDay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,6 +387,9 @@ MonoBehaviour:
   - {fileID: 7288688013387046459, guid: 0e35df935a3be5a4ab89ce2bd98b1eb3, type: 3}
   - {fileID: 606617675166317562, guid: cfab5112fc7d45b4881a0faee2735f85, type: 3}
   AllFaces: []
+  score:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &342635650
 Transform:
   m_ObjectHideFlags: 0
@@ -409,6 +415,8 @@ GameObject:
   - component: {fileID: 901324453}
   - component: {fileID: 901324455}
   - component: {fileID: 901324454}
+  - component: {fileID: 901324457}
+  - component: {fileID: 901324456}
   m_Layer: 5
   m_Name: Blackground
   m_TagString: Untagged
@@ -448,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -473,6 +481,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901324452}
   m_CullTransparentMesh: 1
+--- !u!114 &901324456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901324452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958bd2355d9edca4db5bd75eb0e136ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerManager:
+  - nameTimer: DayText
+    activateOnStart: 1
+    timerLengt: 1
+    OnTimerDone:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2110892448}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+--- !u!95 &901324457
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901324452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ca794fe9476259448af63acc7adf009, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &904153583
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,12 +643,12 @@ GameObject:
   - component: {fileID: 2110892451}
   - component: {fileID: 2110892450}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110892449
 RectTransform:
   m_ObjectHideFlags: 0
