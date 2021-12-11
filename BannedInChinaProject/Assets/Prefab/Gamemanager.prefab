@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8748930535784342599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8748930535784343481}
+  - component: {fileID: 8748930535784343480}
+  m_Layer: 0
+  m_Name: Gamemanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8748930535784343481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748930535784342599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8748930535784343480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748930535784342599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5b536fb2541314faba70528cd42b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pg: {fileID: 0}
+  mensenAantal: 30
+  currentPerson: {fileID: 0}
+  socialCreditScoreTest: 4
+  gekozenNamenLijst: []
+  alleVoorNamen:
+  - Youri
+  - Johanna
+  - Sean
+  - Joppe
+  - Sabe
+  - Berend
+  - Guus
+  - Jorg
+  - Jim
+  - Arthur
+  alleAchterNamen:
+  - Toebosch
+  - Schuring
+  - Scholtens
+  - Giesselink
+  - Wastafel
+  - Jansen
+  - De Gans
+  - Van den Berg
+  - De Rooij
+  - Stroopwafel
+  alleBeroepen:
+  - Houthakker
+  - Loodgieter
+  - Game designer
+  - Metselaar
+  - Docent
+  AlleIllegalIitems:
+  - {fileID: 8834273260383728055, guid: 929eb715d0b64cf429956d1e9165d76d, type: 3}
+  AlleLegalItems:
+  - {fileID: 606617675166317562, guid: cfab5112fc7d45b4881a0faee2735f85, type: 3}
+  - {fileID: 7288688013387046459, guid: 0e35df935a3be5a4ab89ce2bd98b1eb3, type: 3}
+  AllFaces: []
