@@ -9,7 +9,7 @@ public class CoinFlipScript : MonoBehaviour
     [SerializeField] private UnityEvent Tails;
     public void TossCoin()
     {
-        int flip = Random.Range(0, 2);
+        int flip = Random.RandomRange(0, 2);
         if(flip == 1)
         {
             Heads.Invoke();

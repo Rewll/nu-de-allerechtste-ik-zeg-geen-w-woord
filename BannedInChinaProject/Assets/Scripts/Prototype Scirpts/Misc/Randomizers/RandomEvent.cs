@@ -9,7 +9,7 @@ public class RandomEvent : MonoBehaviour
 
     public void PickRandomEvent()
     {
-        events[Random.Range(0, events.Count)].Outcome.Invoke();
+        events[Random.RandomRange(0, events.Count)].Outcome.Invoke();
     }
 
 }
