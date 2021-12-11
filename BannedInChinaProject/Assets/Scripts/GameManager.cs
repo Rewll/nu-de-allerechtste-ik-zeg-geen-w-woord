@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public PersonGenration pg;
-
+    public enum legalState { legal, illegalName, illegalSuitCase, illegalJob }
     public int mensenAantal;
     public GameObject currentPerson;
     public int socialCreditScoreTest;
@@ -26,7 +27,6 @@ public class GameManager : MonoBehaviour
         genereerLijst();
     }
 
-    //wist je da thg
     void genereerLijst()
     {
         while (gekozenNamenLijst.Count != mensenAantal)
@@ -39,37 +39,4 @@ public class GameManager : MonoBehaviour
             } 
         }
     }
-
-    public void legal()
-    {
-        if (pg.personStateOfLegal.ToString() == "legal")
-        {
-            socialCreditScoreTest += 2;
-        }
-        else //Slecht geantwoord
-        {
-            socialCreditScoreTest -= 10;
-        }
-        nextPerson();
-    }
-
-    public void illegal()
-    {
-        if (pg.personStateOfLegal.ToString() != "legal") //Goed geantwoord
-        {
-            socialCreditScoreTest += 2;
-        }
-        else //Slecht geantwoord
-        {
-            socialCreditScoreTest -= 10;
-
-        }
-        nextPerson();
-    }
-
-    void nextPerson()
-    {
-        pg.generatePerson();
-    }
-
 }

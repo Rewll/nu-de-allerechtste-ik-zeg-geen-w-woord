@@ -7,12 +7,12 @@ public class PersonGenration : MonoBehaviour
     public GameManager gm;
     public string PersonName;
     public string Job;
-    public enum legalState { legal, illegalName, illegalSuitCase, illegalJob}
-    public legalState personStateOfLegal;
     public int illegalChance;
+    public GameManager.legalState personStateOfLegal;
 
     void Start()
     {
+        //first person generated
         generatePerson();
     }
 
@@ -26,22 +26,22 @@ public class PersonGenration : MonoBehaviour
             switch (illegalThing = Random.Range(1, 3))
             {
                 case 1:
-                    personStateOfLegal = legalState.illegalName;
+                    personStateOfLegal = GameManager.legalState.illegalName;
                     chooseIllegalName();
                     break;
                 case 2:
-                    personStateOfLegal = legalState.illegalSuitCase;
+                    personStateOfLegal = GameManager.legalState.illegalSuitCase;
                     chooseLegalName();
                     break;
                 case 3:
-                    personStateOfLegal = legalState.illegalJob;
+                    personStateOfLegal = GameManager.legalState.illegalJob;
                     chooseLegalName();
                     break;
             }
         }
         else 
         {
-            personStateOfLegal = legalState.legal;
+            personStateOfLegal = GameManager.legalState.legal;
             PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
             chooseLegalName();
         }
@@ -52,7 +52,7 @@ public class PersonGenration : MonoBehaviour
         do
         {
             PersonName = gm.alleVoorNamen[Random.Range(0, gm.alleVoorNamen.Count)] + " " +
-                      gm.alleAchterNamen[Random.Range(0, gm.alleAchterNamen.Count)];
+                         gm.alleAchterNamen[Random.Range(0, gm.alleAchterNamen.Count)];
         } while (gm.gekozenNamenLijst.Contains(PersonName));
     }
 
@@ -61,4 +61,5 @@ public class PersonGenration : MonoBehaviour
         PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
         gm.gekozenNamenLijst.Remove(PersonName);
     }
+
 }
