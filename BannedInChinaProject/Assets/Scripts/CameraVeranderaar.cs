@@ -12,14 +12,14 @@ public class CameraVeranderaar : MonoBehaviour
         persoon.SetActive(false);
     }
 
-    public void SelecteerPersoonZicht()
+    public void PersoonZicht()
     {
         bureau.SetActive(false);
         koffer.SetActive(false);
         persoon.SetActive(true);
     }
 
-    public void SelecteerKofferZicht()
+    public void KofferZicht()
     {
         bureau.SetActive(false);
         koffer.SetActive(true);

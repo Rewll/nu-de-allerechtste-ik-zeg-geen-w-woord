@@ -15,7 +15,6 @@ public class Briefcase : MonoBehaviour
     private bool stop;
     private void Start()
     {
-        transform.position = new Vector3(SuitcaseStartX,YPos, transform.position.z);
         GenerateNewBriefcase();
     }
 
@@ -52,5 +51,6 @@ public class Briefcase : MonoBehaviour
         }
 
         Speed = StartSpeed;
+        transform.position = new Vector3(SuitcaseStartX, YPos, transform.position.z);
     }
 }

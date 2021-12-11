@@ -620,9 +620,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594cf99b32a404f4d8e7b17dc3111cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bureau: {fileID: 1096234483}
+  bureau: {fileID: 1019196186}
   koffer: {fileID: 1915074885}
-  persoon: {fileID: 1019196186}
+  persoon: {fileID: 1096234483}
 --- !u!4 &234852171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7063415208002578187, guid: a0b83575007eb0845a9e66bc77f5d961, type: 3}
@@ -805,12 +805,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2146778027}
     - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
       propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2146778027}
     - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1864739810}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
       propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: generatePerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GenerateNewBriefcase
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Briefcase, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526602043621984465, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3526602043775416003, guid: bbe27827621988140a4a655b7fd46efa, type: 3}
       propertyPath: m_Pivot.x
@@ -1006,9 +1034,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 223804678}
         m_TargetAssemblyTypeName: CameraVeranderaar, Assembly-CSharp
-        m_MethodName: SelecteerPersoonZicht
+        m_MethodName: PersoonZicht
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1073,7 +1101,7 @@ GameObject:
   - component: {fileID: 1019196188}
   - component: {fileID: 1019196187}
   m_Layer: 0
-  m_Name: Persoon
+  m_Name: Bureau
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1235,7 +1263,7 @@ GameObject:
   - component: {fileID: 1096234486}
   - component: {fileID: 1096234485}
   m_Layer: 0
-  m_Name: Bureu
+  m_Name: Persoon
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,7 +1277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096234483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 25.8, y: 5.7, z: 0}
   m_LocalScale: {x: 0.858585, y: 0.858585, z: 0.858585}
   m_Children: []
   m_Father: {fileID: 223804677}
@@ -1290,7 +1318,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.64
+  orthographic size: 6.84
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1394,9 +1422,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 223804678}
         m_TargetAssemblyTypeName: CameraVeranderaar, Assembly-CSharp
-        m_MethodName: SelecteerPersoonZicht
+        m_MethodName: BureauZicht
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1572,12 +1600,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2146778027}
     - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
       propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2146778027}
     - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1864739810}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
       propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: generatePerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GenerateNewBriefcase
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Briefcase, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 338969014822129696, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
+      propertyPath: newPerson.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b27ba36bea249d4fbee481abec6d8ef, type: 3}
@@ -1746,9 +1802,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 223804678}
         m_TargetAssemblyTypeName: CameraVeranderaar, Assembly-CSharp
-        m_MethodName: SelecteerKofferZicht
+        m_MethodName: KofferZicht
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2248,7 +2304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1915074886
 Transform:
   m_ObjectHideFlags: 0
@@ -2257,7 +2313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915074885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 40, y: 21, z: 0}
   m_LocalScale: {x: 0.858585, y: 0.858585, z: 0.858585}
   m_Children: []
   m_Father: {fileID: 223804677}
@@ -2298,7 +2354,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.64
+  orthographic size: 5.83
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
