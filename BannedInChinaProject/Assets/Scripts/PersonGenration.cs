@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PersonGenration : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PersonGenration : MonoBehaviour
     public enum legalState { legal, illegalName, illegalSuitCase, illegalJob}
     public legalState personStateOfLegal;
     public int illegalChance;
+    public TMP_Text personNameText;
+    public TMP_Text jobText;
 
     void Start()
     {
@@ -18,9 +21,8 @@ public class PersonGenration : MonoBehaviour
 
     public void generatePerson()
     {
-
-        PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
         Job = gm.alleBeroepen[Random.Range(0, gm.alleBeroepen.Count)];
+        jobText.text = Job;
 
         if (Random.Range(0, illegalChance) == 1)
         {
@@ -29,18 +31,42 @@ public class PersonGenration : MonoBehaviour
             {
                 case 1:
                     personStateOfLegal = legalState.illegalName;
+                    chooseIllegalName();
                     break;
                 case 2:
                     personStateOfLegal = legalState.illegalSuitCase;
+                    chooseLegalName();
                     break;
                 case 3:
                     personStateOfLegal = legalState.illegalJob;
+                    chooseLegalName();
                     break;
             }
         }
-        else
+        else 
         {
             personStateOfLegal = legalState.legal;
+            PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
+            chooseLegalName();
         }
+
+
+        gm.legalityText.text = personStateOfLegal.ToString();
+        personNameText.text = PersonName;
+    }
+
+    void chooseIllegalName()
+    {
+        do
+        {
+            PersonName = gm.alleVoorNamen[Random.Range(0, gm.alleVoorNamen.Count)] + " " +
+                      gm.alleAchterNamen[Random.Range(0, gm.alleAchterNamen.Count)];
+        } while (gm.gekozenNamenLijst.Contains(PersonName));
+    }
+
+    void chooseLegalName()
+    {
+        PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
+        gm.gekozenNamenLijst.Remove(PersonName);
     }
 }

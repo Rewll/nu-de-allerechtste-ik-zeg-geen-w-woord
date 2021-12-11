@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    //public List<GameObject> Personen = new List<GameObject>();
+    public PersonGenration pg;
 
     public int mensenAantal;
+    public GameObject currentPerson;
+    public int socialCreditScoreTest;
+    private string playerInput;
     [Space]
     public List<string> gekozenNamenLijst = new List<string>();
     [Space]
@@ -16,12 +20,15 @@ public class GameManager : MonoBehaviour
     public List<GameObject> AlleIllegalIitems = new List<GameObject>();
     public List<GameObject> AlleLegalItems = new List<GameObject>();
     public List<GameObject> AllFaces = new List<GameObject>();
-
+    public TMP_Text SocialCreditScore;
+    public TMP_Text legalityText;
 
     void Start()
     {
         genereerLijst();
+        SocialCreditScore.text =  "Social Credit Score: " + socialCreditScoreTest.ToString();
     }
+
     //wist je da thg
     void genereerLijst()
     {
@@ -35,4 +42,39 @@ public class GameManager : MonoBehaviour
             } 
         }
     }
+
+    public void legal()
+    {
+        if (pg.personStateOfLegal.ToString() == "legal")
+        {
+            socialCreditScoreTest += 2;
+        }
+        else //Slecht geantwoord
+        {
+            socialCreditScoreTest -= 10;
+        }
+        SocialCreditScore.text = "Social Credit Score: " + socialCreditScoreTest.ToString();
+        nextPerson();
+    }
+
+    public void illegal()
+    {
+        if (pg.personStateOfLegal.ToString() != "legal") //Goed geantwoord
+        {
+            socialCreditScoreTest += 2;
+        }
+        else //Slecht geantwoord
+        {
+            socialCreditScoreTest -= 10;
+
+        }
+        SocialCreditScore.text = "Social Credit Score: " + socialCreditScoreTest.ToString();
+        nextPerson();
+    }
+
+    void nextPerson()
+    {
+        pg.generatePerson();
+    }
+
 }
