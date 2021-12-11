@@ -8,21 +8,33 @@ public class Briefcase : MonoBehaviour
     [SerializeField] private GameManager GameManager;
     [SerializeField] private int AmountOfItems;
     [SerializeField] private float Speed;
+    [SerializeField] private int SuitcaseStartX;
+    [SerializeField] private int SuitcaseEndX;
+    [SerializeField] private float StartSpeed;
+    [SerializeField] private float YPos;
     private bool stop;
     private void Start()
     {
-        transform.position = new Vector3(-12, 0, 0);
+        transform.position = new Vector3(SuitcaseStartX,YPos, transform.position.z);
         GenerateNewBriefcase();
+    }
+
+    public void ChangeSpeed(float newSpeed)
+    {
+        Speed = newSpeed;
     }
 
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x + Speed, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime, transform.position.y, transform.position.z);
+        if(transform.position.x >= SuitcaseEndX)
+        {
+            Speed = 0;
+        }
     }
 
     public void GenerateNewBriefcase()
     {
-        Debug.Log(PersonScript.personStateOfLegal.ToString());
         if (PersonScript.personStateOfLegal.ToString() == "illegalSuitCase")
         {
             Instantiate(GameManager.AlleIllegalIitems[Random.Range(0, GameManager.AlleIllegalIitems.Count)], transform);
@@ -39,6 +51,6 @@ public class Briefcase : MonoBehaviour
             }
         }
 
-
+        Speed = StartSpeed;
     }
 }

@@ -61,7 +61,7 @@ public class Trigger2DScript : MonoBehaviour
         }
     }
 
-    private void OnTrigger2DExit(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (compareTag && isActive)
         {
