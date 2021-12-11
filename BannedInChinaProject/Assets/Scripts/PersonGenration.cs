@@ -11,8 +11,6 @@ public class PersonGenration : MonoBehaviour
     public enum legalState { legal, illegalName, illegalSuitCase, illegalJob}
     public legalState personStateOfLegal;
     public int illegalChance;
-    public TMP_Text personNameText;
-    public TMP_Text jobText;
 
     void Start()
     {
@@ -22,7 +20,6 @@ public class PersonGenration : MonoBehaviour
     public void generatePerson()
     {
         Job = gm.alleBeroepen[Random.Range(0, gm.alleBeroepen.Count)];
-        jobText.text = Job;
 
         if (Random.Range(0, illegalChance) == 1)
         {
@@ -49,10 +46,6 @@ public class PersonGenration : MonoBehaviour
             PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
             chooseLegalName();
         }
-
-
-        gm.legalityText.text = personStateOfLegal.ToString();
-        personNameText.text = PersonName;
     }
 
     void chooseIllegalName()

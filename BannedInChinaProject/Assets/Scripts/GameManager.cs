@@ -20,13 +20,11 @@ public class GameManager : MonoBehaviour
     public List<GameObject> AlleIllegalIitems = new List<GameObject>();
     public List<GameObject> AlleLegalItems = new List<GameObject>();
     public List<GameObject> AllFaces = new List<GameObject>();
-    public TMP_Text SocialCreditScore;
-    public TMP_Text legalityText;
+
 
     void Start()
     {
         genereerLijst();
-        SocialCreditScore.text =  "Social Credit Score: " + socialCreditScoreTest.ToString();
     }
 
     //wist je da thg
@@ -53,7 +51,6 @@ public class GameManager : MonoBehaviour
         {
             socialCreditScoreTest -= 10;
         }
-        SocialCreditScore.text = "Social Credit Score: " + socialCreditScoreTest.ToString();
         nextPerson();
     }
 
@@ -68,7 +65,6 @@ public class GameManager : MonoBehaviour
             socialCreditScoreTest -= 10;
 
         }
-        SocialCreditScore.text = "Social Credit Score: " + socialCreditScoreTest.ToString();
         nextPerson();
     }
 
