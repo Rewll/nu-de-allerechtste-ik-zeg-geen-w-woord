@@ -545,24 +545,36 @@ PrefabInstance:
       value: Plumber
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
-      propertyPath: alleBeroepen.Array.data[3]
-      value: Builder
-      objectReference: {fileID: 0}
-    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
-      propertyPath: alleBeroepen.Array.data[4]
+      propertyPath: alleBeroepen.Array.data[2]
       value: Policeman
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
-      propertyPath: alleBeroepen.Array.data[5]
+      propertyPath: alleBeroepen.Array.data[3]
       value: Teacher
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
-      propertyPath: alleBeroepen.Array.data[6]
+      propertyPath: alleBeroepen.Array.data[4]
       value: Dictator
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
-      propertyPath: alleBeroepen.Array.data[7]
+      propertyPath: alleBeroepen.Array.data[5]
       value: Cleaner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: alleBeroepen.Array.data[6]
+      value: Doctor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: alleBeroepen.Array.data[7]
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: alleBeroepen.Array.data[8]
+      value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: alleBeroepen.Array.data[9]
+      value: Astronaut
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
       propertyPath: alleVoorNamen.Array.data[9]
@@ -936,7 +948,7 @@ RectTransform:
   m_GameObject: {fileID: 541028334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32726, y: 0.32726, z: 0.32726}
   m_Children: []
   m_Father: {fileID: 551941245}
   m_RootOrder: 0
@@ -968,16 +980,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b68aac6e1bf3a1c4483652582fca55b6, type: 3}
-    m_FontSize: 19
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: What is your name?
 --- !u!222 &541028337
@@ -1000,8 +1012,9 @@ GameObject:
   - component: {fileID: 551941248}
   - component: {fileID: 551941247}
   - component: {fileID: 551941246}
+  - component: {fileID: 551941249}
   m_Layer: 5
-  m_Name: Knoppei
+  m_Name: VraagKnop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270.2, y: -142.5}
+  m_AnchoredPosition: {x: 226.5, y: -133.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551941246
@@ -1071,10 +1084,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724995257}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 551941249}
+        m_TargetAssemblyTypeName: VraagScript, Assembly-CSharp
+        m_MethodName: Praat
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1121,6 +1134,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551941244}
   m_CullTransparentMesh: 1
+--- !u!114 &551941249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551941244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c8c5fd707ec9c4590bbdf535b8b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pg: {fileID: 2146778027}
+  spraakOnderdeel: 0
+  spraakTekstenErvoor:
+  - "My name is \n"
+  - 'My job is '
+  spraakTekst: {fileID: 587755833}
+  knopTekst: {fileID: 541028336}
+  spraakbubbel: {fileID: 1724995257}
+  mondBeweging:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &587755831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1169,7 @@ GameObject:
   - component: {fileID: 587755834}
   - component: {fileID: 587755833}
   - component: {fileID: 587755835}
+  - component: {fileID: 587755836}
   m_Layer: 5
   m_Name: SpraakTekst
   m_TagString: Untagged
@@ -1216,6 +1253,27 @@ MonoBehaviour:
   tekst: {fileID: 587755833}
   ervoor: My name is \n
   erachter: '!'
+--- !u!114 &587755836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587755831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c8c5fd707ec9c4590bbdf535b8b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pg: {fileID: 0}
+  spraakOnderdeel: 0
+  spraakTekstenErvoor: []
+  spraakTekst: {fileID: 0}
+  knopTekst: {fileID: 0}
+  spraakbubbel: {fileID: 0}
+  mondBeweging:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &637195961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2351,8 +2409,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212236408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.98, y: -14.8, z: 0}
-  m_LocalScale: {x: 3.537711, y: 3.537711, z: 3.537711}
+  m_LocalPosition: {x: -7.98, y: -15.8, z: 0}
+  m_LocalScale: {x: 2.3348892, y: 2.3348892, z: 2.3348892}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3016,7 +3074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1724995258
 Transform:
   m_ObjectHideFlags: 0
@@ -3025,7 +3083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724995257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -117.55264, y: 98.240456, z: 0}
+  m_LocalPosition: {x: -28, y: 88.4, z: 0}
   m_LocalScale: {x: 68.885864, y: 68.885864, z: 68.885864}
   m_Children:
   - {fileID: 587755832}
@@ -3578,31 +3636,83 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 587755835}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VeranderNieuweTekst
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: VeranderNieuweTekst
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VeranderNieuweTekst
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VeranderTekst, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: VeranderTekst, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: VeranderTekst, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefBaanDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
       propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423624223397310338, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}
+      propertyPath: geefNaamDoor.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6423624223397310339, guid: 0332065c430cc4f4cabee5134deb5463, type: 3}

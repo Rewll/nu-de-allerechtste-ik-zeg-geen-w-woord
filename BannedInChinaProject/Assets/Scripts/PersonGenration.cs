@@ -13,6 +13,8 @@ public class PersonGenration : MonoBehaviour
     [Space]
     [SerializeField]
     private UnityEvent<string> geefNaamDoor;
+    [SerializeField]
+    private UnityEvent<string> geefBaanDoor;
 
     void Start()
     {
@@ -50,6 +52,7 @@ public class PersonGenration : MonoBehaviour
             chooseLegalName();
         }
         geefNaamDoor.Invoke(PersonName);
+        geefBaanDoor.Invoke(Job);
     }
 
     void chooseIllegalName()
