@@ -21,9 +21,10 @@ public class NamenLijstScript : MonoBehaviour
         for (int i = 0; i < gm.gekozenNamenLijst.Count; i++)
         {
             GameObject newText = Instantiate(textPrefab, new Vector3(firstTextPos.position.x, firstTextPos.position.y - yOffset, transform.position.z), Quaternion.identity);
-            newText.transform.parent = transform;
+            newText.transform.SetParent(transform);
+            newText.transform.localScale = new Vector3(.3f, .2f, 1);
             newText.GetComponent<Text>().text = gm.gekozenNamenLijst[i];
-            yOffset -= yOffsetAmount;
+            yOffset += yOffsetAmount;
 
         }
     }
