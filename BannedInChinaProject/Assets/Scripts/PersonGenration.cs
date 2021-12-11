@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PersonGenration : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PersonGenration : MonoBehaviour
     public string Job;
     public int illegalChance;
     public GameManager.legalState personStateOfLegal;
+    [Space]
+    [SerializeField]
+    private UnityEvent<string> geefNaamDoor;
 
     void Start()
     {
@@ -45,6 +49,7 @@ public class PersonGenration : MonoBehaviour
             PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
             chooseLegalName();
         }
+        geefNaamDoor.Invoke(PersonName);
     }
 
     void chooseIllegalName()

@@ -10,6 +10,7 @@ public class CameraVeranderaar : MonoBehaviour
         bureau.SetActive(true);
         koffer.SetActive(false);
         persoon.SetActive(false);
+        
     }
 
     public void PersoonZicht()

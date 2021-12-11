@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> AlleIllegalIitems = new List<GameObject>();
     public List<GameObject> AlleLegalItems = new List<GameObject>();
     public List<GameObject> AllFaces = new List<GameObject>();
-
+    public UnityEvent <string> score;
 
     void Start()
     {
@@ -39,4 +39,10 @@ public class GameManager : MonoBehaviour
             } 
         }
     }
+
+    public void scoreSchrijven()
+    {
+        score.Invoke(socialCreditScoreTest.ToString());
+    }
+
 }
