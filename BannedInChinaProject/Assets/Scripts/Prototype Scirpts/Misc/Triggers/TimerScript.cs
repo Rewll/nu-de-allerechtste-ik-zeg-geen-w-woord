@@ -21,7 +21,7 @@ public class TimerScript : MonoBehaviour
 
     public void StartTimerByNumber(int timerNumber)
     {
-        StartCoroutine(Timer(timerNumber-1));
+        StartCoroutine(Timer(timerNumber));
     }
 
     public void StartTimerByName(string timerName)
