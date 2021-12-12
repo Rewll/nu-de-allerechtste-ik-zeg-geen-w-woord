@@ -12,9 +12,5 @@ public class NextPageExtras : MonoBehaviour
         {
             gameObject.active = false;
         }
-        else
-        {
-            Debug.Log("NietLaaste");
-        }
     }
 }

@@ -14,7 +14,7 @@ public class VraagScript : MonoBehaviour
     //public string BaanErvoorTekst;
     //public string NaamErvoorTekst;
     public Text spraakTekst;
-    public Text knopTekst;
+    //public Text knopTekst;
     public GameObject spraakbubbel;
     public UnityEvent mondBeweging;
 
@@ -44,12 +44,12 @@ public class VraagScript : MonoBehaviour
             case 1:
                 spraakbubbel.SetActive(true);
                 spraakTekst.text = spraakTekstenErvoor[0] + pg.PersonName;
-                knopTekst.text = "What is your Job?";
+                //knopTekst.text = "What is your Job?";
                 mondBeweging.Invoke();
                 break;
             case 2:
                 spraakTekst.text = spraakTekstenErvoor[1] + pg.Job;
-                knopTekst.text = "What is your name?";
+                //knopTekst.text = "What is your name?";
                 mondBeweging.Invoke();
                 break;
         }

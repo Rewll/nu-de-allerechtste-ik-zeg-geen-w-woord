@@ -31,7 +31,7 @@ public class PersonGenration : MonoBehaviour
         if (Random.Range(0, illegalChance) == 0)
         {
             int illegalThing;
-            switch (illegalThing = Random.Range(1, 3))
+            switch (illegalThing = Random.Range(1, 4))
             {
                 case 1:
                     personStateOfLegal = GameManager.legalState.illegalName;
