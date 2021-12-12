@@ -28,7 +28,7 @@ public class PersonGenration : MonoBehaviour
     {
         Job = gm.alleBeroepen[Random.Range(0, gm.alleBeroepen.Count)];
 
-        if (Random.Range(0, illegalChance) == 1)
+        if (Random.Range(0, illegalChance) == 0)
         {
             int illegalThing;
             switch (illegalThing = Random.Range(1, 3))

@@ -21,7 +21,6 @@ public class NamenLijstGeneratie : MonoBehaviour
     public int CurrentPage; 
     [Space]
     public GameObject parentOfTextItems;
-
     private void Start()
     {
         maxPerPaginaAantalBijgehouden = maxPerPaginaAantal;
