@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3244150716481306091}
   - component: {fileID: 9212659624143836998}
   m_Layer: 5
-  m_Name: TextPrefab
+  m_Name: RegelTekstPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b68aac6e1bf3a1c4483652582fca55b6, type: 3}
-    m_FontSize: 37
-    m_FontStyle: 1
+    m_FontSize: 43
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 185

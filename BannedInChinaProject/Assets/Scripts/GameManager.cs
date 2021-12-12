@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private string playerInput;
     [Space]
     public List<string> gekozenNamenLijst = new List<string>();
+    [TextArea]
+    public List<string> regels = new List<string>();
     [Space]
     public List<string> alleVoorNamen = new List<string>();
     public List<string> alleAchterNamen = new List<string>();
