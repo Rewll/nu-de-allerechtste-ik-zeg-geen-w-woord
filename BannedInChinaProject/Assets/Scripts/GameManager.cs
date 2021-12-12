@@ -44,5 +44,4 @@ public class GameManager : MonoBehaviour
     {
         score.Invoke(socialCreditScoreTest.ToString());
     }
-
 }

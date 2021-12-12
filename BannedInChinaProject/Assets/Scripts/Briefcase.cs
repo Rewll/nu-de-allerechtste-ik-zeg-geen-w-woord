@@ -12,9 +12,12 @@ public class Briefcase : MonoBehaviour
     [SerializeField] private int SuitcaseEndX;
     [SerializeField] private float StartSpeed;
     [SerializeField] private float YPos;
+    [SerializeField] private GameObject parentOfItems;
+    [SerializeField] private bool firstTime;
     private bool stop;
     private void Start()
     {
+        firstTime = true;
         GenerateNewBriefcase();
     }
 
@@ -34,19 +37,34 @@ public class Briefcase : MonoBehaviour
 
     public void GenerateNewBriefcase()
     {
+        if (!firstTime)
+        {
+            foreach (Transform child in parentOfItems.transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+        else if (firstTime)
+        {
+            firstTime = false;
+        }
+
         if (PersonScript.personStateOfLegal.ToString() == "illegalSuitCase")
         {
-            Instantiate(GameManager.AlleIllegalIitems[Random.Range(0, GameManager.AlleIllegalIitems.Count)], transform);
+            GameObject newIllegalItem = Instantiate(GameManager.AlleIllegalIitems[Random.Range(0, GameManager.AlleIllegalIitems.Count)], transform);
+            newIllegalItem.transform.SetParent(parentOfItems.transform);
             for (int i = 0; i < AmountOfItems -1; i++)
             {
-                Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
+                GameObject newLegalItem = Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
+                newLegalItem.transform.SetParent(parentOfItems.transform);
             }
         }
         else
         {
             for (int i = 0; i < AmountOfItems; i++)
             {
-                Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
+                GameObject newLegalItem = Instantiate(GameManager.AlleLegalItems[Random.Range(0, GameManager.AlleLegalItems.Count)], transform);
+                newLegalItem.transform.SetParent(parentOfItems.transform);
             }
         }
 

@@ -10,15 +10,17 @@ public class PersonGenration : MonoBehaviour
     public string Job;
     public int illegalChance;
     public GameManager.legalState personStateOfLegal;
-    [Space]
-    [SerializeField]
-    private UnityEvent<string> geefNaamDoor;
-    [SerializeField]
-    private UnityEvent<string> geefBaanDoor;
+    //[Space]
+    //[SerializeField]
+    //private UnityEvent<string> geefNaamDoor;
+    //[SerializeField]
+    //private UnityEvent<string> geefBaanDoor;
+    private bool firstTime;
 
     void Start()
     {
         //first person generated
+        firstTime = true;
         generatePerson();
     }
 
@@ -51,8 +53,8 @@ public class PersonGenration : MonoBehaviour
             PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
             chooseLegalName();
         }
-        geefNaamDoor.Invoke(PersonName);
-        geefBaanDoor.Invoke(Job);
+        //geefNaamDoor.Invoke(PersonName);
+        //geefBaanDoor.Invoke(Job);
     }
 
     void chooseIllegalName()
@@ -67,7 +69,13 @@ public class PersonGenration : MonoBehaviour
     void chooseLegalName()
     {
         PersonName = gm.gekozenNamenLijst[Random.Range(0, gm.gekozenNamenLijst.Count)];
-        gm.gekozenNamenLijst.Remove(PersonName);
+        if (!firstTime)
+        {
+            gm.gekozenNamenLijst.Remove(PersonName);
+        }
+        else
+        {
+            firstTime = false;
+        }
     }
-
 }
