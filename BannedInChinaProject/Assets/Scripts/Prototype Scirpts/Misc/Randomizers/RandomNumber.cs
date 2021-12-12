@@ -23,7 +23,7 @@ public class RandomNumber : MonoBehaviour
 
     public void RandomValue()
     {
-        SendValue.Invoke(Mathf.Round(Random.RandomRange(Min * Mathf.Pow(10 , DecimalsCount), Max * Mathf.Pow(10, DecimalsCount))) / Mathf.Pow(10, DecimalsCount));
+        SendValue.Invoke(Mathf.Round(Random.Range(Min * Mathf.Pow(10 , DecimalsCount), Max * Mathf.Pow(10, DecimalsCount))) / Mathf.Pow(10, DecimalsCount));
     }
 
     int CountDigitsAfterDecimal(float value)

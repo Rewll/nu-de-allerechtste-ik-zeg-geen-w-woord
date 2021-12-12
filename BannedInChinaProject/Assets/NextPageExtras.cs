@@ -10,7 +10,7 @@ public class NextPageExtras : MonoBehaviour
     {
         if (NamenLijstGeneratie.CurrentPage == NamenLijstGeneratie.lijstVanLijsten.Count - 1)
         {
-            gameObject.active = false;
+            gameObject.SetActive(false);
         }
     }
 }

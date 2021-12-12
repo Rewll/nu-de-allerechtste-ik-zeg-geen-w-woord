@@ -640,7 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: {fileID: 2146778027}
   gameManager: {fileID: 470276112}
-  name: {fileID: 193747034}
+  pname: {fileID: 1252901145}
   job: {fileID: 640324581}
   JobLieChance: 1
   NameLieChance: 1

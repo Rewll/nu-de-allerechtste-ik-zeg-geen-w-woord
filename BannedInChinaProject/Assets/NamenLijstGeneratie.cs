@@ -33,7 +33,7 @@ public class NamenLijstGeneratie : MonoBehaviour
     {
         deleteText();
         CurrentPage++;
-        Debug.Log(lijstVanLijsten[CurrentPage][4]);
+        //Debug.Log(lijstVanLijsten[CurrentPage][4]);
         instantiateText(lijstVanLijsten[CurrentPage]);
     }
 

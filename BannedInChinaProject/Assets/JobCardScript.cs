@@ -7,7 +7,7 @@ public class JobCardScript : MonoBehaviour
 {
     [SerializeField] private PersonGenration person;
     public GameManager gameManager;
-    [SerializeField] private Text name;
+    [SerializeField] private Text pname;
     [SerializeField] private Text job;
     [SerializeField] private int JobLieChance;
     [SerializeField] private int NameLieChance;
@@ -25,7 +25,7 @@ public class JobCardScript : MonoBehaviour
                 {
                     fakeName = gameManager.alleVoorNamen[Random.Range(0, gameManager.alleVoorNamen.Count)] + " " + gameManager.alleAchterNamen[Random.Range(0, gameManager.alleAchterNamen.Count)]; ;
                 } while (fakeName == person.name ||!gameManager.gekozenNamenLijst.Contains(fakeName));
-                name.text = fakeName;
+                pname.text = fakeName;
                 job.text = person.Job;
             }
             else if (randomInt <= JobLieChance + NameLieChance && JobLieChance != 0)
@@ -35,7 +35,7 @@ public class JobCardScript : MonoBehaviour
                 {
                     fakeJob = gameManager.alleBeroepen[Random.Range(0, gameManager.alleBeroepen.Count)];
                 } while (fakeJob == person.Job);
-                name.text = person.PersonName;
+                pname.text = person.PersonName;
                 job.text = fakeJob;
             }
             else 
@@ -46,7 +46,7 @@ public class JobCardScript : MonoBehaviour
         }
         else
         {
-            name.text = person.PersonName;
+            pname.text = person.PersonName;
             job.text = person.Job;
         }
     }

@@ -9,7 +9,7 @@ public class BackPageExtras : MonoBehaviour
     {
         if (NamenLijstGeneratie.CurrentPage == 0)
         {
-            gameObject.active = false;
+            gameObject.SetActive(false);
         }
     }
 }
