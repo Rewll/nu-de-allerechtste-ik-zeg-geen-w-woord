@@ -248,11 +248,11 @@ MonoBehaviour:
   timerManager:
   - nameTimer: Reset
     activateOnStart: 0
-    timerLengt: 0.1
+    timerLengt: 0
     OnTimerDone:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 767763116242546777}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: ResetTrigger
           m_Mode: 5

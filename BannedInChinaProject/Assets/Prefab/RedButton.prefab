@@ -248,7 +248,7 @@ MonoBehaviour:
   timerManager:
   - nameTimer: Reset
     activateOnStart: 0
-    timerLengt: 0.1
+    timerLengt: 0
     OnTimerDone:
       m_PersistentCalls:
         m_Calls:

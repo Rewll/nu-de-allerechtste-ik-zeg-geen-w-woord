@@ -141,45 +141,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3482354436819814881, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: timerManager.Array.data[0].timerLengt
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3482354436819814881, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
       propertyPath: timerManager.Array.data[0].OnTimerDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9264423}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
-      propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5040270066830415641, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -242,28 +206,20 @@ PrefabInstance:
       value: GreenButton
       objectReference: {fileID: 0}
     - target: {fileID: 767763116242546779, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
-      propertyPath: timerManager.Array.data[0].timerLengt
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 767763116242546779, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
       propertyPath: timerManager.Array.data[0].OnTimerDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1252357893}
-    - target: {fileID: 767763116242546779, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
-      propertyPath: timerManager.Array.data[0].OnTimerDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetTrigger
-      objectReference: {fileID: 0}
     - target: {fileID: 767763116242546855, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 767763116242546855, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19838908
+      value: -1.54
       objectReference: {fileID: 0}
     - target: {fileID: 767763116242546855, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3676536
+      value: -2.39
       objectReference: {fileID: 0}
     - target: {fileID: 767763116242546855, guid: ebd6a0f3f38e7274ab29a108b47430f7, type: 3}
       propertyPath: m_LocalPosition.z
