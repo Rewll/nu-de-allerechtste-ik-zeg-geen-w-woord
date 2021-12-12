@@ -49,18 +49,17 @@ public class RegelBoekScript : MonoBehaviour
             streepLinks.SetActive(false);
 
         }
-        //else if (huidigePagina == PagePrefabs.Count)
-        //{
-        //    PagePrefabs[huidigePagina].SetActive(true);
-        //    for (int i = 1; i < PagePrefabs.Count; i++)
-        //    {
-        //        if (i != huidigePagina)
-        //        {
-        //            PagePrefabs[i].SetActive(false);
-        //            PagePrefabs[i + 1].SetActive(false);
-        //        }
-        //    }
-        //}
+        else if (huidigePagina == PagePrefabs.Count)
+        {
+            PagePrefabs[huidigePagina].SetActive(true);
+            for (int i = 1; i < PagePrefabs.Count; i++)
+            {
+                if (i != huidigePagina && i != huidigePagina + 1)
+                {
+                    PagePrefabs[i].SetActive(false);
+                }
+            }
+        }
         else
         {
             PagePrefabs[huidigePagina].SetActive(true);
@@ -73,6 +72,8 @@ public class RegelBoekScript : MonoBehaviour
                 }
             }
 
+
+            //VISUALS
             PaginaPapierLinks.SetActive(true);
             hoekieLinks.SetActive(true);
             streepLinks.SetActive(true);
