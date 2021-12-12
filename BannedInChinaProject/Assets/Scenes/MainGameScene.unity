@@ -941,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
       propertyPath: AlleLegalItems.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
       propertyPath: alleAchterNamen.Array.size
@@ -999,6 +999,30 @@ PrefabInstance:
       propertyPath: AlleLegalItems.Array.data[2]
       value: 
       objectReference: {fileID: 8834273260383728055, guid: 7c5d922c98eeae045be73b2208884fa1, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[3]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: 0c888133cc41b5241912a5d85a02f961, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[4]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: fc5b55b9ad52aa746b234e89a5b2d22e, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[5]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: 234532fef9562954c83217b8ec30fbd4, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[6]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: c5c64b33f52c64c4d99176d108aa0dfc, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[7]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: 8db3c7d6bd95eda41961d58daf1637f7, type: 3}
+    - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
+      propertyPath: AlleLegalItems.Array.data[8]
+      value: 
+      objectReference: {fileID: 8834273260383728055, guid: 1317e600ce71f36479d3feceafa36247, type: 3}
     - target: {fileID: 8748930535784343480, guid: ffdf46beef091364fb818aa3acc9fd3a, type: 3}
       propertyPath: alleVoorNamen.Array.data[10]
       value: Micheal
