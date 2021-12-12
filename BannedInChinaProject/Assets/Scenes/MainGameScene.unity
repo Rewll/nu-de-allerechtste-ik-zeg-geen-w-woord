@@ -2526,6 +2526,36 @@ MonoBehaviour:
   tekst: {fileID: 587755833}
   ervoor: My name is \n
   erachter: '!'
+--- !u!1 &596822225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596822226}
+  m_Layer: 0
+  m_Name: Corner2 JobCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596822226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596822225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.02, y: -0.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1804710196}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640324579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,7 +2833,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: a6125bb32bb5ec3449c505ea16e7b186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5552,6 +5582,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632985412}
   m_CullTransparentMesh: 1
+--- !u!1 &1636292980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636292981}
+  m_Layer: 0
+  m_Name: Corner1JobCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1636292981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636292980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.03, y: 0.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1804710196}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682406430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,8 +5705,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93157b0651942c44b13396fa69f4e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Middel: {fileID: 72011348}
+  ObjectMiddle: {fileID: 72011348}
   BereauCamera: {fileID: 1019196188}
+  Corner1: {fileID: 1636292981}
+  Corner2: {fileID: 596822226}
 --- !u!1 &1704870931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6120,7 +6182,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.9, y: 0.011335373, z: 25.497753}
   m_LocalScale: {x: 3.2272816, y: 3.35302, z: 3.35302}
-  m_Children: []
+  m_Children:
+  - {fileID: 1636292981}
+  - {fileID: 596822226}
   m_Father: {fileID: 223804677}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6516,7 +6580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898040929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.705, y: -1.074, z: 0}
+  m_LocalPosition: {x: 0.705, y: -1.074, z: -5.82}
   m_LocalScale: {x: 0.9572945, y: 0.9810088, z: 0.35756668}
   m_Children: []
   m_Father: {fileID: 1877845054}
@@ -6660,7 +6724,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 8f798ec385981a14098439dfc65aad10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
