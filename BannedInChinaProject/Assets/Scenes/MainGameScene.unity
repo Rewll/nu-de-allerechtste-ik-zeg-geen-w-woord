@@ -3102,7 +3102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908145931}
   m_Layer: 0
-  m_Name: Corner2List
+  m_Name: Corner2 List
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3116,7 +3116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908145930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.337, y: -0.31, z: 0}
+  m_LocalPosition: {x: 1.069, y: -0.336, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804710196}
@@ -3957,7 +3957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1212236409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4686,8 +4686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectMiddle: {fileID: 4361266904125673979}
   BereauCamera: {fileID: 1019196188}
-  Corner1: {fileID: 1636292981}
-  Corner2: {fileID: 596822226}
+  Corner1: {fileID: 2109707130}
+  Corner2: {fileID: 908145931}
 --- !u!60 &1297690344
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5201,7 +5201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
       propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_StringArgument
-      value: Walk
+      value: Regect
       objectReference: {fileID: 0}
     - target: {fileID: 3604385982336249883, guid: c88cbc0b23d12c740b48aa46d0bffb1e, type: 3}
       propertyPath: onMouseDown.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_StringArgument
@@ -7302,7 +7302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109707129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.418, y: 0.545, z: 0}
+  m_LocalPosition: {x: -2.284, y: 0.296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804710196}
